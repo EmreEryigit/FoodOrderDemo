@@ -1,11 +1,11 @@
 import classes from ".//MealItemForm.module.css";
-import React, {useContext, useRef, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import Input from "../../UI/Input";
-import CartContext from "../../../store/cart-context";
+
 function MealItemForm(props) {
   const [amountIsValid, setAmountIsValid] = useState(true)
   const inputRef = useRef()
-  const ctx = useContext(CartContext)
+
   const submitHandler = (e) => {
     e.preventDefault()
     const amount = inputRef.current.value
